@@ -45,7 +45,7 @@ These folders will be created automatically if they do not exist.
 
 From the project root:
 
-  ```bash
+  ```
   python src/file_tools/doc_to_docx_converter/doc_to_docx_converter.py
   ```
 The tool will:
