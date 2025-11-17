@@ -106,8 +106,8 @@ def convert_doc_to_docx(source_folder, target_folder):
 
 if __name__ == "__main__":
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    SOURCE = os.path.join(BASE_DIR, "../../doc_files")
-    TARGET = os.path.join(BASE_DIR, "../../converted_docs")
+    SOURCE = os.path.join(BASE_DIR, "../../../doc_files")
+    TARGET = os.path.join(BASE_DIR, "../../../converted_docs")
 
     print(f"Source folder: {os.path.abspath(SOURCE)}")
     print(f"Target folder: {os.path.abspath(TARGET)}")
