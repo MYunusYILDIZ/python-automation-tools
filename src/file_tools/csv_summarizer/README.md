@@ -15,14 +15,10 @@ It works with any dataset — sales logs, lab measurements, survey results, engi
 ## 🚀 Features
 
 - Automatic detection of numerical columns  
-- Flexible grouping (one or multiple columns)  
-- Multiple aggregation modes:
-  - `mean` (default)  
-  - `sum`  
-  - `min`  
-  - `max`
-- UTF-8 output for full compatibility  
-- CLI interface for automation and scripting  
+- Flexible grouping (one or multiple columns)
+- Aggregation modes: `mean`, `sum`, `min`, `max`
+- UTF-8 output (Excel-friendly)
+- Command-line usage
 
 ---
 
@@ -31,7 +27,7 @@ It works with any dataset — sales logs, lab measurements, survey results, engi
 From the project root:
 
 ```bash
-python file_tools/csv_summarizer/csv_summarizer.py \
+python src/file_tools/csv_summarizer/csv_summarizer.py \
     input.csv \
     output.csv \
     --group ColumnA ColumnB \
@@ -40,26 +36,52 @@ python file_tools/csv_summarizer/csv_summarizer.py \
 
 ---
 
-## 📌 Example
+## 📌 Example (using the included dataset)
 
-### Input (`sales.csv`)
-| Product | Region | Price | Quantity |
-|---------|--------|-------|----------|
-| A       | EU     | 10    | 5        |
-| A       | EU     | 12    | 3        |
-| B       | US     | 7     | 8        |
+### Input  
+Located at:
+
+```
+examples/csv_summarizer/sample_input.csv
+```
+
+Contents:
+
+```
+Product,Region,Price,Quantity
+A,EU,10,5
+A,EU,12,3
+B,US,7,8
+B,US,7,10
+C,EU,5,12
+C,EU,15,3
+```
 
 ### Command
 
 ```bash
-python file_tools/csv_summarizer/csv_summarizer.py sales.csv summary.csv --group Product Region --mode mean
+python src/file_tools/csv_summarizer/csv_summarizer.py \
+    examples/csv_summarizer/sample_input.csv \
+    examples/csv_summarizer/sample_output.csv \
+    --group Product Region \
+    --mode mean
 ```
 
-### Output
-| Product | Region | Price | Quantity |
-|---------|--------|-------|----------|
-| A       | EU     | 11    | 4        |
-| B       | US     | 7     | 8        |
+### Output  
+Generated at:
+
+```
+examples/csv_summarizer/sample_output.csv
+```
+
+Example output:
+
+```
+Product,Region,Price,Quantity
+A,EU,11.0,4.0
+B,US,7.0,9.0
+C,EU,10.0,7.5
+```
 
 ---
 
@@ -74,9 +96,9 @@ numpy
 
 ## 📝 Notes
 
-- Non-numeric columns are ignored during calculations  
-- Group columns must exist in the input CSV  
-- Output is UTF-8 encoded and Excel-friendly  
+- Non-numeric columns are ignored automatically  
+- Group columns must exist in the CSV  
+- Output is UTF-8 encoded  
 
 ---
 
