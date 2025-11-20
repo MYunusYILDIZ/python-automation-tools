@@ -17,6 +17,7 @@ It works with any dataset — sales logs, lab measurements, survey results, engi
 - Automatic detection of numerical columns  
 - Flexible grouping (one or multiple columns)
 - Aggregation modes: `mean`, `sum`, `min`, `max`
+- **Optional auto-generated output filename with timestamp**  
 - UTF-8 output (Excel-friendly)
 - Command-line usage
 
@@ -33,7 +34,18 @@ python src/file_tools/csv_summarizer/csv_summarizer.py \
     --group ColumnA ColumnB \
     --mode mean
 ```
+If you prefer automatic timestamped output filename, simply pass `auto` instead of a path:
 
+```bash
+python src/file_tools/csv_summarizer/csv_summarizer.py \
+    input.csv \
+    auto \
+    --group ColumnA ColumnB
+```
+This will create a file like
+```
+summary_2025-01-14_23-55-12.csv
+```
 ---
 
 ## 📌 Example (using the included dataset)
@@ -99,7 +111,7 @@ numpy
 - Non-numeric columns are ignored automatically  
 - Group columns must exist in the CSV  
 - Output is UTF-8 encoded  
-
+- Use `auto` to automatically generate timestamped output filenames
 ---
 
 ## 📬 Contact
