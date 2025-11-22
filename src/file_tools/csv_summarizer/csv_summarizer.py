@@ -27,7 +27,7 @@ def add_timestamp_to_filename(output_path, group_cols):
     return os.path.join(folder, new_name)
 
 
-def summarize_csv(input_path, output_path, group_cols, agg_mode="mean"):
+def summarize_csv(input_path, output_path, group_cols, agg_mode="mean", add_timestamp=True):
     """
     Genel amaçlı CSV özetleyici.
     
@@ -69,11 +69,18 @@ def summarize_csv(input_path, output_path, group_cols, agg_mode="mean"):
         sys.exit(1)
 
     # Timestamp'li dosya adı oluştur
-    final_output_path = add_timestamp_to_filename(output_path, group_cols)
+    final_output_path = output_path
+
+    if add_timestamp:
+        # Output dosyasının adını parçala
+        base, ext = os.path.splitext(output_path)
+        timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M")
+        final_output_path = f"{base}_{timestamp}{ext}"
 
     # CSV olarak kaydet
     agg_df.to_csv(final_output_path, index=False, encoding="utf-8-sig")
     print(f"Özetleme tamamlandı: {final_output_path}")
+    return final_output_path
 
 
 if __name__ == "__main__":
