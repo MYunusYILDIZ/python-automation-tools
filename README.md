@@ -7,6 +7,22 @@ A collection of practical, lightweight tools built in Python for automation, dat
 This repository demonstrates a modular toolbox of scripts and mini-applications designed for everyday automation tasks, project prototyping, and freelance use-cases.  
 Each tool lives in its own folder under `src/file_tools/` and includes examples so you can start quickly.
 
+---
+## 🧠 Origin & Purpose
+
+Many of the tools in this repository originated from real engineering and data-processing tasks I worked on.  
+Over time, I refactored and generalized these components into reusable, standalone utilities.
+
+The goal of this repository is to:
+
+- turn domain-specific workflows into general-purpose tools  
+- share reproducible solutions for common automation needs  
+- build a clean, modular toolbox useful for both personal and freelance work  
+
+Each tool is designed to be simple, dependency-light, and easily adaptable to different datasets and file structures.
+
+---
+
 ## 📁 Structure
 
 ```
