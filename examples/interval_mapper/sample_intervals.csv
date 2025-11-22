@@ -1,0 +1,6 @@
+Category,Min,Max,Label
+A,0,10,Low
+A,10,20,Medium
+A,20,30,High
+B,5,15,Zone1
+B,15,25,Zone2
