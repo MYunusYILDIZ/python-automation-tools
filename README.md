@@ -77,7 +77,15 @@ pandas
 numpy
 # (Add more as needed by each tool)
 ```
+---
+## 🚀 Quick Start:
 
+```
+git clone https://github.com/MYunusYILDIZ/python-automation-tools
+cd python-automation-tools
+pip install -r requirements.txt
+```
+---
 ## 📌 How to Use
 
 Choose the tool you want and follow its individual README instructions.  
