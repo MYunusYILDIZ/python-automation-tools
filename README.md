@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/banner6.png" alt="Python Automation Tools Banner" width=900/>
+  <img src="./assets/banner.png" alt="Python Automation Tools Banner" width=900/>
 </p>
 
 # Python-Automation-Tools
@@ -12,6 +12,7 @@ This repository demonstrates a modular toolbox of scripts and mini-applications 
 Each tool lives in its own folder under `src/file_tools/` and includes examples so you can start quickly.
 
 ---
+
 ## 🧠 Origin & Purpose
 
 Many of the tools in this repository originated from real engineering and data-processing tasks I worked on.  
@@ -19,9 +20,9 @@ Over time, I refactored and generalized these components into reusable, standalo
 
 The goal of this repository is to:
 
-- turn domain-specific workflows into general-purpose tools  
-- share reproducible solutions for common automation needs  
-- build a clean, modular toolbox useful for both personal and freelance work  
+- turn domain-specific workflows into general-purpose tools
+- share reproducible solutions for common automation needs
+- build a clean, modular toolbox useful for both personal and freelance work
 
 Each tool is designed to be simple, dependency-light, and easily adaptable to different datasets and file structures.
 
@@ -56,15 +57,18 @@ python-automation-tools/
 
 ## 🛠 Tools Included
 
-### 📄 csv_summarizer  
+### 📄 csv_summarizer
+
 Group CSV files by one or more columns and compute summary statistics (mean, sum, min, max).  
 See `src/file_tools/csv_summarizer/README.md` for details.
 
-### 📁 doc_to_docx_converter  
+### 📁 doc_to_docx_converter
+
 Bulk convert `.doc` files into `.docx`, clean filenames, and produce ready-to-use output folders.  
 See `src/file_tools/doc_to_docx_converter/README.md` for details.
 
-### 📊 interval_mapper  
+### 📊 interval_mapper
+
 Map numeric values against defined intervals and assign labels—ideal for engineering data workflow.  
 See `src/file_tools/interval_mapper/README.md` for details.
 
@@ -81,7 +85,9 @@ pandas
 numpy
 # (Add more as needed by each tool)
 ```
+
 ---
+
 ## 🚀 Quick Start:
 
 ```
@@ -89,7 +95,9 @@ git clone https://github.com/MYunusYILDIZ/python-automation-tools
 cd python-automation-tools
 pip install -r requirements.txt
 ```
+
 ---
+
 ## 📌 How to Use
 
 Choose the tool you want and follow its individual README instructions.  
@@ -105,10 +113,10 @@ python src/file_tools/csv_summarizer/csv_summarizer.py \
 
 ## 🧭 Roadmap & Next Steps
 
-- Add more file-tool modules: **excel_cleaner**, **batch_file_renamer**, **pdf_converter**  
-- Improve documentation: add video or GIF demos  
-- Add unit tests and CI workflows  
-- Consider packaging selected tools as Python libraries  
+- Add more file-tool modules: **excel_cleaner**, **batch_file_renamer**, **pdf_converter**
+- Improve documentation: add video or GIF demos
+- Add unit tests and CI workflows
+- Consider packaging selected tools as Python libraries
 
 ## 🤝 Contributing
 
