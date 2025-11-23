@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/banner6.png" alt="Python Automation Tools Banner" width=900/>
+</p>
+
 # Python-Automation-Tools
 
 A collection of practical, lightweight tools built in Python for automation, data processing, and utility applications.
