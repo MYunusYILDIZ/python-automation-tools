@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "python-automation-tools"
+version = "0.1.0"
+description = "A collection of small, reusable Python automation utilities (CSV tools, interval mapping, converters)."
+authors = [
+    { name="Muhammed Yunus Yıldız", email="m.y.yildiz@outlook.com.tr" }
+]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "pandas",
+    "numpy"
+]
+
+
+[project.urls]
+Homepage = "https://github.com/MYunusYILDIZ/python-automation-tools"
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
